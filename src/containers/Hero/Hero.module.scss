@@ -68,10 +68,9 @@
       display: block;
       font-family: $font-inter;
       font-weight: 400;
-
       line-height: 1.05;
       color: white;
-
+      z-index: 2;
       span {
         font-weight: 700;
       }
