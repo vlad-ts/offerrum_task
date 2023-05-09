@@ -1,0 +1,121 @@
+@use "../../util" as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  @include breakpoint-up(lg) {
+    &:nth-child(1) {
+      order: 0;
+    }
+    &:nth-child(2) {
+      order: 3;
+    }
+
+    &:nth-child(3) {
+      order: 2;
+    }
+    &:nth-child(4) {
+      order: 1;
+    }
+  }
+
+  &__backdrop {
+    width: 226px;
+    height: 20px;
+    position: absolute;
+    top: 309px;
+    background-color: rgba(51, 62, 81, 0.6);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    backdrop-filter: blur(27.5px);
+
+    @include breakpoint-up(lg) {
+      width: 269px;
+      top: 320px;
+    }
+  }
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 260px;
+    max-height: 273px;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    padding: 48px 15px 90px 15px;
+    background-color: rgb(50, 60, 80, 0.9);
+    border-radius: 20px;
+    position: relative;
+    backdrop-filter: blur(30.5px);
+
+    @include breakpoint-up(lg) {
+      width: 310px;
+      height: 320px;
+      max-width: none;
+      max-height: none;
+      padding-top: 30px;
+      padding-bottom: 50px;
+      padding-left: 19px;
+      padding-right: 19px;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__img {
+    width: 83px;
+    height: 83px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0px;
+      left: 0px;
+      background-color: rgba(255, 166, 0, 0.342);
+      filter: blur(8px);
+      border-radius: 50%;
+
+      @include breakpoint-up(lg) {
+        filter: blur(13px);
+      }
+    }
+
+    @include breakpoint-up(lg) {
+      width: 117px;
+      height: 117px;
+    }
+
+    img {
+      width: 100%;
+      position: relative;
+
+      @include breakpoint-up(lg) {
+      }
+    }
+  }
+
+  &__text {
+    font-family: $font-inter;
+    font-weight: 400;
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+    line-height: 1.5625;
+    margin-top: 20px;
+
+    @include breakpoint-up(lg) {
+      font-size: 1.188rem;
+      line-height: 1.3;
+    }
+  }
+}

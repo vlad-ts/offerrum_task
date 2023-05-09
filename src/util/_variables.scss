@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+@font-face {
+  font-family: "walsheim";
+  src: local("walsheim"),
+    url(../../fonts/GTWalsheimPro-Medium.ttf) format("truetype");
+}
+
+$font-inter: "Inter", sans-serif;
+$font-gt-walsheim-pro: "walsheim";

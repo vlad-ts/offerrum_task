@@ -1,0 +1,127 @@
+@use "../../util" as *;
+
+.modal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  border-radius: 30px;
+  background-image: radial-gradient(
+    42.84% 203.07% at 15.58% -40.39%,
+    #323e51 0%,
+    #1d2532 100%
+  );
+  position: relative;
+  overflow: hidden;
+
+  &__close {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 17px;
+    cursor: pointer;
+
+    @include breakpoint-up(lg) {
+      top: 45px;
+      right: 51px;
+      width: 23px;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__inner-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 45px 15px 41px 15px;
+    max-width: 471px;
+
+    @include breakpoint-up(lg) {
+      padding: 56px 120px 90px 70px;
+      max-width: 670px;
+    }
+
+    h1 {
+      font-family: $font-inter;
+      font-weight: 700;
+      font-size: 1.438rem;
+      color: white;
+      text-align: left;
+      width: 100%;
+
+      @include breakpoint-up(lg) {
+        font-size: 2.813rem;
+      }
+    }
+
+    p {
+      font-family: $font-inter;
+      font-weight: 400;
+      font-size: 1.125rem;
+      color: white;
+      padding-top: 15px;
+
+      @include breakpoint-up(lg) {
+        font-size: 1.313rem;
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+
+      input {
+        color: #757575;
+        font-family: $font-inter;
+        font-weight: 400;
+        font-size: 1.125rem;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        padding: 15px 15px 15px 15px;
+        width: 100%;
+
+        margin-top: 35px;
+      }
+
+      button {
+        max-width: none;
+        margin-top: 18px;
+      }
+    }
+  }
+
+  &__gradient {
+    position: absolute;
+    bottom: -72px;
+    right: -131px;
+    width: 288px;
+    height: 262px;
+    background-image: linear-gradient(
+      170.98deg,
+      rgba(195, 243, 58, 0.25) 25.59%,
+      rgba(41, 209, 89, 0.25) 100.44%
+    );
+    border-radius: 50%;
+    transform: rotate(11.97deg);
+    filter: blur(86px);
+    pointer-events: none;
+
+    @include breakpoint-up(lg) {
+      height: 386px;
+      width: 425px;
+      top: -58px;
+      right: -145px;
+    }
+  }
+}

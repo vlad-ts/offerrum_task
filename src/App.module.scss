@@ -1,0 +1,33 @@
+@use "./util" as *;
+
+.main-container {
+  background-color: white;
+  width: 100%;
+  overflow: hidden;
+
+  .outer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1d2532;
+    padding: 0 1.5rem 0 1.5rem;
+
+    .inner-container {
+      width: 100%;
+      max-width: 1280px;
+    }
+  }
+
+  .benefits-container {
+    align-items: flex-start;
+    margin-top: 70px;
+    border-radius: 20px;
+    background-image: linear-gradient(212.69deg, #323e51 4.9%, #1d2532 55.16%);
+
+    @include breakpoint-up(lg) {
+      background-color: white;
+      background-image: none;
+      margin-top: 195px;
+    }
+  }
+}
